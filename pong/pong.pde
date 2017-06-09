@@ -6,22 +6,32 @@ void setup() {
 
 void draw() {
   drawGameScreen();
+  text(leftScore, 400,200 );
+  text(rightScore, 800, 200);  
 }
 
 void drawGameScreen() {
-  // Draw background
-  // Update Ball Velocity and Resolve Collisions
-  // Update Ball and Paddle Positions
-  // Draw Ball and Paddles
-  // Display Scores
+  background(bgColor);
+ // detectKeys();
+  drawBall();
+  updateBallVelocity();
+  updateBallPosition();
+  drawPaddles();
 }
 
 void drawBall() {
-  // Display Ball in correct position
+fill(ballColor);
+  ellipse(ballX, ballY, 2*ballRadius, 2*ballRadius);
 }
 
 void drawPaddles() {
-  // Display Left and Right paddles in correct position
+   fill(paddleColor);
+  rectMode(CENTER);
+ rect(0+paddleWidth/2,leftPaddle,paddleWidth,paddleLength);
+   fill(paddleColor);
+  rectMode(CENTER);
+ rect(displayWidth-paddleWidth/2,rightPaddle,paddleWidth,paddleLength);
+updatePaddlePositions();
 }
 
 void resetGame(){
