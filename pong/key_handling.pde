@@ -6,6 +6,7 @@ void keyPressed() {
   if (key == RESET)         reset = true;
   if (key == PAUSE)         pause = true;
   if (key == START)         start = true;
+   if (key == UNPAUSE)         pause = false;
 }
 
 void keyReleased() {
@@ -14,6 +15,6 @@ void keyReleased() {
   if (key == RIGHT_UP)      right_up = false;
   if (key == RIGHT_DOWN)    right_down = false;
   if (key == RESET)         reset = false;
-  if (key == PAUSE)         pause = false;
+ 
   if (key == START)         start = false;
 }
